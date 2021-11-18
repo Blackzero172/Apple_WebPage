@@ -1,0 +1,32 @@
+@font-face {
+	font-family: "Light";
+	src: url("../font/SFProLight.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Medium";
+	src: url("../font/SFProMedium.ttf");
+}
+@font-face {
+	font-family: "Regular";
+	src: url("../font/SFProRegular.ttf");
+}
+@font-face {
+	font-family: Semibold;
+	src: url("../font/SFProSemiBold.ttf");
+}
+
+.font-1 {
+	font-family: "Light";
+}
+
+.font-2 {
+	font-family: "Medium";
+}
+
+.font-3 {
+	font-family: "Regular";
+}
+
+.font-4 {
+	font-family: "Semibold";
+}
