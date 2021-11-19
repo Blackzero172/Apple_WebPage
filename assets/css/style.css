@@ -1,3 +1,20 @@
+/* Vars */
+:root {
+	--dk-clr: #333;
+	--black-clr: #222;
+	--light-clr: #ddd;
+	--white-clr: #fff;
+	--link-clr: #4991da;
+	--pink-clr: #e9b1d8;
+	--bg-clr: #eaf2fc;
+}
+
+/* Remove Scrollbar */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Fonts */
 @font-face {
 	font-family: "Light";
 	src: url("../font/SFProLight.ttf") format("truetype");
@@ -11,22 +28,359 @@
 	src: url("../font/SFProRegular.ttf");
 }
 @font-face {
-	font-family: Semibold;
+	font-family: "Semibold";
 	src: url("../font/SFProSemiBold.ttf");
 }
+@font-face {
+	font-family: "Thin";
+	src: url("../font/SFProThin.ttf");
+}
+@font-face {
+	font-family: "UltraLight";
+	src: url("../font/SFProUltraLight.ttf");
+}
 
-.font-1 {
+/* Animations */
+@keyframes rotation {
+	from {
+		transform: rotate(352.5deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Thin";
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-style: normal;
+	list-style: none;
+	color: var(--light-clr);
+}
+
+/* Navbar Styling */
+.navbar ul li {
+	height: 44px;
+}
+.nav_btn {
+	font-weight: 300;
+	font-size: 11.5px;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	transition: color 0.5s ease;
+}
+.navbar {
+	background-color: #161616e1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+.navbar::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(6px);
+	z-index: -5;
+}
+.navbar ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	width: 996px;
+}
+.nav_btn:hover {
+	color: #fff;
+}
+.logo svg {
+	fill: var(--light-clr);
+	transition: fill 0.5s ease;
+}
+.logo svg:hover {
+	fill: var(--white-clr);
+}
+
+/* Holiday sale bar */
+.holiday-sale {
+	width: 100vw;
+	height: 44px;
+	background-color: #e34140;
+	margin-top: 44px;
+}
+.holiday-sale p {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	line-height: 44px;
+}
+.holiday-sale a,
+.holiday-sale p {
+	letter-spacing: normal;
+	color: var(--white-clr);
+}
+
+/* Main Content Flex Container */
+.flex-container {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 100%;
+}
+.flex-container div {
+	margin-bottom: 0.8rem;
+}
+
+/* Upper Heroes Grid */
+.upper-grid {
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-areas:
+		"holiday-section holiday-section"
+		"holiday-section holiday-section"
+		"iphone-13Pro iphone-13Pro"
+		"iphone-13Pro iphone-13Pro"
+		"iphone-13 iphone-13"
+		"iphone-13 iphone-13";
+	gap: 0.8rem;
+	max-width: 100%;
+}
+
+/* Lower Promos Grid */
+.lower-grid {
+	width: 98.5%;
+	height: auto;
+	display: grid;
+	grid-template-areas:
+		"macbook airpods"
+		"homepod watch"
+		"apple-card apple-tv";
+	gap: 0.8rem;
+	max-width: 100%;
+}
+
+/* Main Styling */
+main section {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+.holiday-logo {
+	margin: 1.75rem 0 1rem 0;
+}
+.flex-container * {
+	letter-spacing: 0px;
+}
+.upper-grid a {
+	margin-bottom: 3rem;
+}
+.img-container img {
+	margin: 0 1.5rem;
+	transform: rotate(352.5deg);
+	animation: rotation 5s 1s ease 1 forwards;
+}
+.upper-section {
+	height: 694px;
+}
+.lower-section {
+	width: 919px;
+	height: 582px;
+}
+
+.holiday-section {
+	grid-area: holiday-section;
+	background-color: #eaf2fc;
+}
+.iphone-13Pro {
+	grid-area: iphone-13Pro;
+	background-image: url("https://www.apple.com/v/home/ah/images/heroes/iphone-13-pro/hero_iphone_13pro__dhnsegysa42u_largetall.jpg");
+}
+.iphone-13 {
+	grid-area: iphone-13;
+	background-image: url("https://www.apple.com/v/home/ah/images/heroes/iphone-13/hero_iphone_13__f194u1rdooeq_largetall.jpg");
+}
+.macbook {
+	grid-area: macbook;
+	background-image: url("https://www.apple.com/v/home/ah/images/promos/macbook-pro/tile_macbookpro__cx0ur0qg9biq_large.jpg");
+}
+.airpods {
+	grid-area: airpods;
+	background-image: url("https://www.apple.com/v/home/ah/images/promos/airpods/tile_airpods__fuv6vgn42y2q_large.jpg");
+	justify-content: flex-end;
+}
+.homepod {
+	grid-area: homepod;
+	background-image: url("https://www.apple.com/v/home/ah/images/promos/homepod-mini/tile_homepod_mini__b73w4z3ljymu_large.jpg");
+}
+.watch {
+	grid-area: watch;
+	background-image: url("https://www.apple.com/v/home/ah/images/promos/watch-series-7/tile_watch__e9n11b6m6yq2_large.jpg");
+}
+.apple-card {
+	grid-area: apple-card;
+	background-image: url("https://www.apple.com/v/home/ah/images/promos/apple-card/tile__cauwwcyyn9hy_large.jpg");
+}
+.apple-tv {
+	grid-area: apple-tv;
+	background-image: url("https://www.apple.com/v/home/ah/images/promos/tv-plus-dickinson-s3/promo_dickinson__c9ea4l2f5rki_large.jpg");
+}
+.iphone-13Pro h2,
+.iphone-13 h2,
+.macbook h2,
+.homepod h2,
+.apple-card img,
+.apple-tv img {
+	margin-top: 2.7rem;
+}
+.apple-card img,
+.apple-tv img {
+	margin-top: 4rem;
+}
+.iphone-13Pro p,
+.iphone-13 p,
+.macbook p,
+.homepod p,
+.apple-card p,
+.apple-tv p,
+.apple-tv a {
+	letter-spacing: 0.8px;
+}
+.airpods .text-container {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+.logo-container {
+	text-align: center;
+	margin-top: 2.2rem;
+}
+.logo-container .new-text {
+	color: #d3865b;
+	font-size: 0.8rem;
+	margin-bottom: 0.8rem;
+}
+.apple-card p {
+	width: 285px;
+	text-align: center;
+}
+.apple-card img {
+	margin-bottom: 0.5rem;
+}
+.apple-tv .show-logo {
+	margin-top: 18.2rem;
+}
+.apple-tv a {
+	margin-top: 1rem;
+}
+
+/* Footer Styling + Flex */
+footer {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: #f5f5f7;
+}
+.footer-flex {
+	width: 52.5%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.footer-text {
+	padding-top: 1rem;
+	width: 100%;
+	padding-bottom: 0.7rem;
+}
+.footer-text ul li {
+	font-size: 12px;
+	line-height: 1.33337;
 	font-family: "Light";
+	letter-spacing: 0.075em;
 }
-
-.font-2 {
-	font-family: "Medium";
+.footer-text ul li,
+.footer-nav ul li,
+.footer-nav p {
+	color: var(--dk-clr);
+	margin-bottom: 0.6rem;
 }
-
-.font-3 {
+.footer-nav p {
+	margin-top: 1.5rem;
+	letter-spacing: 0;
+}
+.footer-nav ul li {
+	margin-bottom: 0.4rem;
+}
+.footer-nav ul li,
+.footer-nav ul li a {
 	font-family: "Regular";
 }
+.footer-text ul li a {
+	color: var(--black-clr);
+	font-family: "Medium";
+}
+.footer-nav ul li a {
+	font-size: 0.75rem;
+	color: var(--dk-clr);
+	letter-spacing: 0.075em;
+}
+.footer-nav ul li a:hover {
+	text-decoration: underline;
+}
 
-.font-4 {
-	font-family: "Semibold";
+.footer-nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-self: start;
+}
+.footer-nav > div {
+	width: 196px;
+}
+
+/* Copyright Styling */
+.copyright-text {
+	width: 52.5%;
+	padding: 1.7rem 0;
+}
+.copyright-text p,
+.copyright-text a {
+	letter-spacing: 0.05em;
+	display: inline-block;
+}
+.copyright-text hr {
+	margin: 0.5rem 0;
+}
+.legal-links {
+	display: inline-block;
+	margin-left: 1rem;
+}
+.legal-links a {
+	padding-left: 0.6rem;
+	padding-right: 0.2rem;
+}
+.legal-links a:not(:first-child, :last-child) {
+	border-left: 1px solid #33333399;
+}
+.country-btn {
+	margin-left: rem;
 }

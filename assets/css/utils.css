@@ -1,0 +1,89 @@
+.btn {
+	color: var(--link-clr);
+	z-index: 1;
+}
+.small-chevron {
+	font-size: 10px;
+}
+.big-chevron {
+	font-size: 16px;
+}
+.btn:hover {
+	text-decoration: underline;
+}
+.bg-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.text-tiny {
+	font-size: 0.775rem;
+}
+.text-small {
+	font-size: 1rem;
+}
+.text-xsmall {
+	font-size: 1.3rem;
+}
+.text-medium {
+	font-size: 1.75rem;
+}
+.text-xmedium {
+	font-size: 2rem;
+}
+.text-large {
+	font-size: 2.5rem;
+}
+.text-xlarge {
+	font-size: 3.5rem;
+}
+.font-light {
+	font-family: "Light";
+}
+.font-regular {
+	font-family: "Regular";
+}
+.font-semibold {
+	font-family: "Semibold";
+}
+
+.font-thin {
+	font-family: "Thin";
+}
+.font-ultlight {
+	font-family: "UltraLight";
+}
+.font-medium {
+	font-family: "Medium";
+}
+.bg-light {
+	background-color: var(--light-clr);
+}
+.bg-dark {
+	background-color: var(--dk-clr);
+}
+.text-dark {
+	color: var(--dk-clr);
+}
+.text-black {
+	color: var(--black-clr);
+}
+.text-white {
+	color: var(--white-clr);
+}
+.text-pink {
+	color: var(--pink-clr);
+}
+.text-link {
+	color: var(--link-clr);
+}
+.links a {
+	margin: 0 1rem;
+}
+.links {
+	margin-top: 1rem;
+	z-index: 10;
+}
