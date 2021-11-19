@@ -8,7 +8,6 @@
 	--pink-clr: #e9b1d8;
 	--bg-clr: #eaf2fc;
 }
-
 /* Remove Scrollbar */
 body::-webkit-scrollbar {
 	display: none;
