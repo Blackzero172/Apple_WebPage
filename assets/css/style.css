@@ -193,6 +193,9 @@ main section {
 .upper-grid a {
 	margin-bottom: 3rem;
 }
+.img-container {
+	width: 50%;
+}
 .img-container img {
 	margin: 0 1.5rem;
 	transform: rotate(352.5deg);
