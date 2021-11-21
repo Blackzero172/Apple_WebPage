@@ -194,7 +194,9 @@ main section {
 	margin-bottom: 3rem;
 }
 .img-container {
-	width: 50%;
+	display: flex;
+	justify-content: center;
+	width: 70%;
 }
 .img-container img {
 	margin: 0 1.5rem;
