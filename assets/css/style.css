@@ -8,9 +8,10 @@
 	--pink-clr: #e9b1d8;
 	--bg-clr: #eaf2fc;
 }
-/* Remove Scrollbar */
-body::-webkit-scrollbar {
-	display: none;
+/* Fitting with Scrollbar */
+body,
+.navbar {
+	width: 99.2vw;
 }
 
 /* Fonts */
@@ -79,7 +80,7 @@ body::-webkit-scrollbar {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
+	/* width: 100%; */
 	position: fixed;
 	top: 0;
 	z-index: 10;
@@ -114,7 +115,7 @@ body::-webkit-scrollbar {
 
 /* Holiday sale bar */
 .holiday-sale {
-	width: 100vw;
+	width: 100%;
 	height: 44px;
 	background-color: #e34140;
 	margin-top: 44px;
@@ -133,7 +134,7 @@ body::-webkit-scrollbar {
 
 /* Main Content Flex Container */
 .flex-container {
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -217,36 +218,36 @@ main section {
 }
 .iphone-13Pro {
 	grid-area: iphone-13Pro;
-	background-image: url("https://www.apple.com/v/home/ah/images/heroes/iphone-13-pro/hero_iphone_13pro__dhnsegysa42u_largetall.jpg");
+	background-image: url("/assets/img/iPhone13Pro-Hero.jpg");
 }
 .iphone-13 {
 	grid-area: iphone-13;
-	background-image: url("https://www.apple.com/v/home/ah/images/heroes/iphone-13/hero_iphone_13__f194u1rdooeq_largetall.jpg");
+	background-image: url("/assets/img/iPhone13-Hero.jpg");
 }
 .macbook {
 	grid-area: macbook;
-	background-image: url("https://www.apple.com/v/home/ah/images/promos/macbook-pro/tile_macbookpro__cx0ur0qg9biq_large.jpg");
+	background-image: url("/assets/img/Macbook-Hero.jpg");
 }
 .airpods {
 	grid-area: airpods;
-	background-image: url("https://www.apple.com/v/home/ah/images/promos/airpods/tile_airpods__fuv6vgn42y2q_large.jpg");
+	background-image: url("/assets/img/AirPods-Hero.jpg");
 	justify-content: flex-end;
 }
 .homepod {
 	grid-area: homepod;
-	background-image: url("https://www.apple.com/v/home/ah/images/promos/homepod-mini/tile_homepod_mini__b73w4z3ljymu_large.jpg");
+	background-image: url("/assets/img/HomePod-Hero.jpg");
 }
 .watch {
 	grid-area: watch;
-	background-image: url("https://www.apple.com/v/home/ah/images/promos/watch-series-7/tile_watch__e9n11b6m6yq2_large.jpg");
+	background-image: url("/assets/img/Watch-Hero.jpg");
 }
 .apple-card {
 	grid-area: apple-card;
-	background-image: url("https://www.apple.com/v/home/ah/images/promos/apple-card/tile__cauwwcyyn9hy_large.jpg");
+	background-image: url("/assets/img/Apple-Card.jpg");
 }
 .apple-tv {
 	grid-area: apple-tv;
-	background-image: url("https://www.apple.com/v/home/ah/images/promos/tv-plus-dickinson-s3/promo_dickinson__c9ea4l2f5rki_large.jpg");
+	background-image: url("/assets/img/Apple-TV.jpg");
 }
 .iphone-13Pro h2,
 .iphone-13 h2,
@@ -298,7 +299,7 @@ main section {
 
 /* Footer Styling + Flex */
 footer {
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
